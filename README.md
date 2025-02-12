@@ -43,8 +43,19 @@ sudo htpasswd -c .<passwdname> <username>
 localhost/ -> default.html
 ```
 
+---
+
 ## 2.Redirect Example
 > ### Page1.html will takes you to page2.html
 ```bash
 localhost/Redirect/page1.html
 ```
+
+---
+
+## 3.Project Example
+> ### Page1.html will takes you to page2.html
+```bash
+localhost/Project/
+```
+> ![Image](https://github.com/user-attachments/assets/f5a54ffa-a232-4035-adef-38c37f90bd66)

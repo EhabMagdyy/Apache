@@ -1,13 +1,35 @@
-## Note
-> ### To check syntax of apache2.conf file:
+## Notes
+> ### Make sure that apache2 is enabled & active
+```bash
+sudo systemctl status apache2
+```
+
+> ### To check syntax of apache2.conf file
 ```bash
 sudo apachectl configtest
 ```
 
-> ### After making change, run:
+> ### After making change, run
 ```bash
 sudo systemctl restart apache2
 ```
+
+> ### Authenticatin: password and username (in var/www/html/)
+```bash
+sudo htpasswd -c .<passwdname> <username>
+```
+
+> ### Protection to "Project" Directory (apache2.conf)
+```bash
+<Directory /var/www/html/Project>
+        AuthType Basic
+        AuthName "Restricted web page"
+        AuthUserFile "/var/www/html/.htpasswd"
+        require valid-user 
+</Directory>
+```
+
+---
 
 ## 1.Change Default file index.html -> default.html
 ```bash
@@ -15,4 +37,14 @@ sudo systemctl restart apache2
 <Directory /var/www/html>
     DirectoryIndex default.html index.html index.php
 </Directory>
+```
+
+```bash
+localhost/ -> default.html
+```
+
+## 2.Redirect Example
+> ### Page1.html will takes you to page2.html
+```bash
+localhost/Redirect/page1.html
 ```

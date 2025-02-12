@@ -34,6 +34,17 @@ sudo htpasswd -c .<passwdname> <username>
 </Directory>
 ```
 
+> ### Change default Apache Configurations:
+```bash
+sudo vim /etc/apache2/sites-available/000-default.conf
+```
+#### make your changes
+```bash
+#ServerName www.example.com
+ServerAdmin webmaster@localhost
+DocumentRoot /var/www/html
+```
+
 ---
 
 ## 1.Change Default file index.html -> default.html

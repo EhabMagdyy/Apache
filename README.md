@@ -1,4 +1,9 @@
 ## Notes
+```bash
+apache files (in ubuntu) at: /etc/apache2/
+application (in ubuntu) at: /var/www/html/
+```
+
 > ### Make sure that apache2 is enabled & active
 ```bash
 sudo systemctl status apache2

@@ -1,9 +1,10 @@
-### To check syntax of apache2.conf file:
+## Note
+> ### To check syntax of apache2.conf file:
 ```bash
 sudo apachectl configtest
 ```
 
-### After making change, run:
+> ### After making change, run:
 ```bash
 sudo systemctl restart apache2
 ```
